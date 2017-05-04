@@ -1,0 +1,86 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.claytapp.taggerbath">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"
+            />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            />
+
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.sign_up_dialog"
+            android:label="sign_up_dialog"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.User_Leaderboard_Activity"
+            android:label="Leaderboards"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.Team_Leaderboard_Activity"
+            android:label="Leaderboards"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.Item_Activity"
+            android:label="Items"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="uk.co.claytapp.taggerbath.Activities.Help_Activity"
+            android:label="Help"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Activities.Repeating_Activity"/>
+
+        <receiver android:name=".Activities.Notification_receiver"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="?colorPrimary"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_area"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <fragment
+            android:id="@+id/googlemap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:context=".Activities.MainActivity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player_hud"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:weightSum="8"
+                    android:id="@+id/signed_in_hud"
+                    android:background="@drawable/list_item_grey">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:id="@+id/pp"
+                            android:layout_gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/unknown_square"/>
+
+                        <!--<com.facebook.login.widget.ProfilePictureView-->
+                            <!--android:id="@+id/pp"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_width="match_parent">-->
+                        <!--</com.facebook.login.widget.ProfilePictureView>-->
+
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:text="Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/PlayerName"
+                                android:textSize="18sp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/lighttext"/>
+
+                            <TextView
+                                android:text="Team"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/PlayerTeam"
+                                android:textSize="18sp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/lighttext" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="3"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:text="Score per minute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView4"
+                                android:textColor="@color/lighttext"
+                                android:layout_marginBottom="2sp" />
+
+                            <TextView
+                                android:text="0000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/spm"
+                                android:textColor="@color/lighttext" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/signed_out_hud">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <Switch
+            android:text="follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/camera_lock"
+            android:layout_gravity="top|right"
+            android:layout_margin="10dp" />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.MainActivity">
+
+
+    <item
+        android:id="@+id/menu_team_leaderboard"
+        android:title="Team Leaderboards"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:icon="@drawable/podium"
+        />
+
+    <item
+        android:id="@+id/menu_leaderboard"
+        android:title="User Leaderboards"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_people_white_24dp"
+        />
+
+
+    <item
+        android:id="@+id/help"
+        android:title="How to play"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_items"
+        android:title="My Items"
+        android:orderInCategory="10"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/runinbackground"
+        android:title="Run in background: On"
+        android:orderInCategory="20"
+        app:showAsAction="never"
+        />
+
+
+    <item
+        android:id="@+id/logout"
+        android:title="Log out"
+        android:orderInCategory="30"
+        app:showAsAction="never" />
+
+
+
+
+
+</menu>
