@@ -6,4 +6,4 @@ Tagger Bath is a location based team oriented land grab game where you are assig
 
 ![Leaderboard](https://i.imgur.com/dIIPNof.png)
 
-![world map](https://i.imgur.com/XZjZ1c4.png)
+![world map](https://i.imgur.com/MOZ9mHz.png)
